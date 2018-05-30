@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Segment, Grid, Image } from 'semantic-ui-react';
+import { Container, Segment, Grid, Image, GridRow, GridColumn } from 'semantic-ui-react';
 import ReactRevealText from 'react-reveal-text';
 import { Link } from 'react-router-dom';
 
@@ -18,9 +18,37 @@ class Rooms extends Component {
               </p>
             </Container>
           </Segment>
+          <Segment>
+            <Grid stackable>
+              <GridRow>
+                <GridColumn width={8}>
+                  <Image src="src/images/rooms/rooma.jpg" />
+                </GridColumn>
+                <GridColumn width={8}>
+                  <Image src="src/images/rooms/roomb.jpg" />
+                </GridColumn>
+              </GridRow>
+              <GridRow>
+                <GridColumn width={8}>
+                  <Image src="src/images/rooms/roomc.jpg" />
+                </GridColumn>
+                <GridColumn width={8}>
+                  <Image src="src/images/rooms/roomd.jpg" />
+                </GridColumn>
+              </GridRow>
+              <GridRow>
+                <GridColumn width={8}>
+                  <Image src="src/images/rooms/roome.jpg" />
+                </GridColumn>
+                <GridColumn width={8}>
+                  <Image src="src/images/rooms/roomf.jpg" />
+                </GridColumn>
+              </GridRow>
+            </Grid>
+          </Segment>
         </Grid.Column>
         <Grid.Column width={13}>
-          <Image src="src/images/vancouver.jpg" />
+          <Image src="src/images/rooms/rooma.jpg" />
         </Grid.Column>
       </Grid.Row>
     );
