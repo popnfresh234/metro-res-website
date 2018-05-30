@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
 
-      <div style={{ paddingLeft: '15em', paddingRight: '15em' }}className="App">
+      <div className="App">
         <NavBar />
         <Grid padded stackable>
           <Switch>
