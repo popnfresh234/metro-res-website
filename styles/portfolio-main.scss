@@ -1,0 +1,30 @@
+
+.TableHeader:hover {
+    cursor: pointer !important;
+}
+
+#RowOnPortfolio .RightColumn {
+  background-color: #d2d2d2;
+  height: '100vh';
+}
+
+.WelcomeName {
+  color: white;
+  font-size: x-large;
+  margin: 0;
+  font-family: 'Heebo', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+#RowOnPortfolio {
+  padding-top: 0;
+}
+
+#RowOnSingleCurrency {
+  padding-top: 0;
+}
+
+#RowOnSingleCurrency .ColumnOnSingleCurrency {
+  background-color: #d2d2d2;
+  height: '100vh';
+}
