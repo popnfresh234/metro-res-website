@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Segment, Grid } from 'semantic-ui-react';
+import { Container, Segment, Grid, Image } from 'semantic-ui-react';
 import ReactRevealText from 'react-reveal-text';
 import { Link } from 'react-router-dom';
 
@@ -27,7 +27,7 @@ class Home extends Component {
           </Segment>
         </Grid.Column>
         <Grid.Column width={13}>
-          <p>Right Home Page</p>
+          <Image src="src/images/vancouver.jpg" />
         </Grid.Column>
       </Grid.Row>
     );
