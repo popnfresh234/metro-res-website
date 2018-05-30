@@ -10,7 +10,7 @@ class Home extends Component {
       <Grid.Row>
         <Grid.Column width={3}>
           <Segment>
-            <Container fluid text textAlign="justified">
+            <Container fluid text textAlign="left">
               <p>
               Welcome to Metro Residences, located in the heart of beautiful Vancouver.
               </p>
