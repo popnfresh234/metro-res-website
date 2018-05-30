@@ -23,8 +23,8 @@ class Home extends Component {
     const { activeItem } = this.state;
     return (
       <Menu size="huge" inverted color="blue" stackable >
-        <Menu.Item name="home" active={activeItem === 'home'} onClick={this.handleItemClick} />
-        <Menu.Item name="rooms" active={activeItem === 'rooms'} onClick={this.handleItemClick} />
+        <Menu.Item as={Link} to="/" name="home" active={activeItem === 'home'} onClick={this.handleItemClick} />
+        <Menu.Item as={Link} to="/rooms" name="rooms" active={activeItem === 'rooms'} onClick={this.handleItemClick} />
         <Menu.Item name="facilities" active={activeItem === 'facilities'} onClick={this.handleItemClick} />
         <Menu.Item name="location" active={activeItem === 'location'} onClick={this.handleItemClick} />
         <Menu.Item name="gallery" active={activeItem === 'gallery'} onClick={this.handleItemClick} />
