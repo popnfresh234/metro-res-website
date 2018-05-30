@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { Container, Segment, Grid, Image, GridRow, GridColumn } from 'semantic-ui-react';
-import ReactRevealText from 'react-reveal-text';
-import { Link } from 'react-router-dom';
 
 class Rooms extends Component {
   constructor( props ) {
