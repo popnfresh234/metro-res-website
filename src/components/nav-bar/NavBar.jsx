@@ -22,7 +22,7 @@ class Home extends Component {
   render() {
     const { activeItem } = this.state;
     return (
-      <Menu pointing secondary>
+      <Menu size="huge" inverted color="blue" stackable >
         <Menu.Item name="home" active={activeItem === 'home'} onClick={this.handleItemClick} />
         <Menu.Item name="rooms" active={activeItem === 'rooms'} onClick={this.handleItemClick} />
         <Menu.Item name="facilities" active={activeItem === 'facilities'} onClick={this.handleItemClick} />
