@@ -11,7 +11,7 @@ class App extends Component {
 
       <div className="App">
         <NavBar />
-        <Grid stackable>
+        <Grid padded stackable>
           <Switch>
             <Route path="/" exact component={Home} />
           </Switch>
