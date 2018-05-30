@@ -74,5 +74,8 @@
     "url": "https://github.com/popnfresh234/chatty/issues"
   },
   "homepage": "https://github.com/popnfresh234/chatty#readme",
-  "main": "server.js"
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  }
 }

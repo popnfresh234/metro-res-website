@@ -1,69 +1,128 @@
-@gray-base: #000;
-@gray-darker: lighten(@gray-base, 13.5%); // #222
-@gray-dark: #303030; // #333
-@gray: #464545;
-@gray-light: #999; // #999
-@gray-lighter: #d2d2d2; // #eee
+/*******************************
+         Site Settings
+*******************************/
 
-@primaryColor: #375a7f;
-@positiveColor: #00bc8c;
-@infoColor: #3498db;
-@warningColor: #f39c12;
-@negativeColor: #e74c3c;
+/*-------------------
+       Fonts
+--------------------*/
 
-@pageBackground: @gray-darker;
-@textColor: #fff;
-@linkColor: desaturate(lighten(@positiveColor, 10%), 10%);
-@linkHoverColor: @linkColor;
-@emSize: 15px;
-@fontSize: 15px;
-@fontName: 'Heebo';
-@importGoogleFonts: false;
-@headerFontWeight: 400;
-@padding-base-vertical: 10px;
-@padding-base-horizontal: 15px;
-@padding-large-vertical: 18px;
-@padding-large-horizontal: 27px;
-@padding-small-vertical: 6px;
-@padding-small-horizontal: 9px;
-@invertedDisabledTextColor: #aaa;
-@disabledTextColor: #fff;
-@disabledBorderColor: transparent;
-@positiveTextColor: #fff;
-@positiveBackgroundColor: #00bc8c;
-@positiveBorderColor: @positiveColor;
-@infoTextColor: #fff;
-@infoBackgroundColor: @infoColor;
-@infoBorderColor: @infoColor;
-@warningTextColor: #fff;
-@warningBackgroundColor: #f39c12;
-@warningBorderColor: @warningColor;
-@negativeTextColor: darken(@textColor, 10%);
-@negativeBackgroundColor: #e74c3c;
-@negativeBorderColor: @negativeColor;
+@headerFont        : 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@pageFont          : 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@googleFontName    : 'Roboto';
 
-@line-height-computed: floor((@emSize * 1.428571429)); // ~20px
+/*-------------------
+      Base Sizes
+--------------------*/
 
-@darktextcolor : rgba(255, 255, 255, 0.9);
-@mutedtextcolor : rgba(255, 255, 255, 0.8);
-@lighttextcolor : rgba(255, 255, 255, 0.7);
-@unselectedtextcolor : rgba(255, 255, 255, 0.5);
-@hoveredtextcolor : rgba(255, 255, 255, 1);
-@pressedtextcolor : rgba(255, 255, 255, 1);
-@selectedtextcolor : rgba(255, 255, 255, 1);
-@disabledtextcolor : rgba(255, 255, 255, 0.2);
+@emSize            : 14px;
+@fontSize          : 13px;
 
-@invertedtextcolor : rgba(255, 255, 255, 0.9);
-@invertedmutedtextcolor : rgba(255, 255, 255, 0.8);
-@invertedlighttextcolor : rgba(255, 255, 255, 0.7);
-@invertedunselectedtextcolor : rgba(255, 255, 255, 0.5);
-@invertedhoveredtextcolor : rgba(255, 255, 255, 1);
-@invertedpressedtextcolor : rgba(255, 255, 255, 1);
-@invertedselectedtextcolor : rgba(255, 255, 255, 1);
-@inverteddisabledtextcolor : rgba(255, 255, 255, 0.2);
+/*--------------
+      Page
+---------------*/
 
-@borderColor: @gray;
+@pageBackground      : #F9F9F9;
+@lineHeight          : 1.33;
+@textColor           : #212121;
 
-@solidBorderColor: @gray-light;
-@inputColor: @gray;
-@inputPlaceholderColor: lighten(@gray, 10%);
+/*--------------
+  Page Heading
+---------------*/
+
+@headerLineHeight : 1.33em;
+@headerFontWeight : 400;
+
+@h1               : 2.25rem;
+@h2               : 2rem;
+@h3               : 1.75rem;
+@h4               : 1.5rem;
+@h5               : 1.25rem;
+
+
+/*-------------------
+        Paths
+--------------------*/
+
+@imagePath : '../../themes/material/assets/images';
+@fontPath  : '../../themes/material/assets/fonts';
+
+/*--------------
+   Paragraphs
+---------------*/
+
+@paragraphLineHeight: 1.7em;
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+@black            : #1B1C1D;
+@blue             : #2196F3;
+@green            : #4CAF50;
+@grey             : #9E9E9E;
+@orange           : #FF9800;
+@pink             : #E91E63;
+@purple           : #9C27B0;
+@red              : #F44336;
+@teal             : #1de9b6;
+@yellow           : #FFEB3B;
+
+/*---  Light Colors  ---*/
+@lightBlack       : #333333;
+@lightBlue        : #2979FF;
+@lightGreen       : #00E676;
+@lightOrange      : #FF9100;
+@lightPink        : #F50057;
+@lightPurple      : #D500F9;
+@lightRed         : #FF1744;
+@lightTeal        : #1DE9B6;
+@lightYellow      : #FFEA00;
+
+/*---   Neutrals  ---*/
+@fullBlack        : #000000;
+@darkGrey         : #AAAAAA;
+@lightGrey        : #DCDDDE;
+@offWhite         : #FAFAFA;
+@darkWhite        : #F0F0F0;
+@white            : #FFFFFF;
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : @blue;
+@secondaryColor      : @grey;
+
+@lightPrimaryColor   : @lightBlue;
+@lightSecondaryColor : @lightGrey;
+
+/*-------------------
+      Paragraph
+--------------------*/
+
+@paragraphMargin     : 0em 0em 1.53em;
+
+/*-------------------
+       Links
+--------------------*/
+
+@linkColor           : #009FDA;
+@linkUnderline       : none;
+@linkHoverColor      : lighten(@linkColor, 5);
+@linkHoverUnderline  : @linkUnderline;
+
+/*-------------------
+  Highlighted Text
+--------------------*/
+
+@highlightBackground : #009FDA;
+@highlightColor      : @white;
+
+/*-------------------
+       Accents
+--------------------*/
+
+/* 4px @ default em */
+@relativeBorderRadius: @relative4px;
+@absoluteBorderRadius: 4px;
