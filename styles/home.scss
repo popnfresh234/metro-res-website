@@ -1,13 +1,17 @@
-$app-padding: 15em;
+// $app-padding: 15em;
 
-.App {
-    padding-left: $app-padding;
-    padding-right: $app-padding;
-}
+// .App {
+//     padding-left: $app-padding;
+//     padding-right: $app-padding;
+// }
 
-@media only screen and (max-width: $largeMonitorBreakpoint) {
-    .App{
-        padding-left: 0px;
-        padding-right: 0px;;
-    }
+// @media only screen and (max-width: $largeMonitorBreakpoint) {
+//     .App{
+//         padding-left: 0px;
+//         padding-right: 0px;;
+//     }
+// }
+
+.left-menu{
+    width: 250px;
 }
