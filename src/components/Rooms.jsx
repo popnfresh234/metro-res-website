@@ -1,23 +1,68 @@
 import React, { Component } from 'react';
-import { Container, Segment, Image, Header } from 'semantic-ui-react';
+import { Container, Segment, Image, Header, Grid, Button } from 'semantic-ui-react';
 
 class Rooms extends Component {
-  render() {
-    const imageStyle = {
-      marginBottom: '0px',
+  constructor( props ) {
+    super( props );
+    this.state = {
+      room: 'rooma',
     };
+    this.rooms = ['rooma', 'roomb', 'roomc', 'roomd', 'roome', 'roomf'];
+    this.handleImageClick = this.handleImageClick.bind( this );
+    this.handleArrowClick = this.handleArrowClick.bind( this );
+  }
+
+  handleImageClick( room, e ) {
+    e.preventDefault();
+    this.setState( {
+      room,
+    } );
+  }
+
+  handleArrowClick( increase ) {
+    console.log( increase );
+    let index = 0;
+    if ( increase ) {
+      index = ( this.rooms.indexOf( this.state.room ) + 1 ) % this.rooms.length;
+    } else if ( this.rooms.indexOf( this.state.room ) - 1 >= 0 ) {
+      index = this.rooms.indexOf( this.state.room ) - 1;
+    } else {
+      index = this.rooms.length - 1;
+    }
+    this.setState( { room: this.rooms[index] } );
+  }
+
+  render() {
     return (
       <div className="container-div">
         <Segment compact raised>
-          <Image src="src/images/rooms/rooma.jpg" />
+          <Grid stackable verticalAlign="middle" textAlign="center">
+            <Grid.Row>
+              <Grid.Column width={1}>
+                <Button circular icon="arrow left" onClick={() => this.handleArrowClick()} />
+              </Grid.Column>
+              <Grid.Column width={14}>
+                <Image src={`src/images/rooms/${this.state.room}.jpg`} />
+              </Grid.Column>
+              <Grid.Column width={1}>
+                <Button circular icon="arrow right" onClick={() => this.handleArrowClick( 'positive' )} />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </Segment>
         <Segment compact raised>
-          <Image as="a" href="" floated="left" style={imageStyle} src="src/images/rooms/thumba.jpg" />
-          <Image as="a" href="" floated="left" style={imageStyle} src="src/images/rooms/thumbb.jpg" />
-          <Image as="a" href="" floated="left" style={imageStyle} src="src/images/rooms/thumbc.jpg" />
-          <Image as="a" href="" floated="left" style={imageStyle} src="src/images/rooms/thumbd.jpg" />
-          <Image as="a" href="" floated="left" style={imageStyle} src="src/images/rooms/thumbe.jpg" />
-          <Image as="a" href="" floated="left" style={{ marginRight: '0px' }} src="src/images/rooms/thumbf.jpg" />
+          <Grid>
+            <Grid.Row>
+              <Grid.Column>
+                <Image spaced className="room-image" as="a" href="" src="src/images/rooms/thumba.jpg" onClick={e => this.handleImageClick( 'rooma', e )} />
+                <Image spaced className="room-image" as="a" href="" src="src/images/rooms/thumbb.jpg" onClick={e => this.handleImageClick( 'roomb', e )} />
+                <Image spaced className="room-image" as="a" href="" src="src/images/rooms/thumbc.jpg" onClick={e => this.handleImageClick( 'roomc', e )} />
+                <Image spaced className="room-image" as="a" href="" src="src/images/rooms/thumbd.jpg" onClick={e => this.handleImageClick( 'roomd', e )} />
+                <Image spaced className="room-image" as="a" href="" src="src/images/rooms/thumbe.jpg" onClick={e => this.handleImageClick( 'roome', e )} />
+                <Image spaced className="room-image" as="a" href="" src="src/images/rooms/thumbf.jpg" onClick={e => this.handleImageClick( 'roomf', e )} />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </Segment>
         <Segment compact raised>
           <Container text>
