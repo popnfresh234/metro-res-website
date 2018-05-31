@@ -3,6 +3,10 @@
     padding-bottom: 0px;
 }
 
+.container-div{
+    padding-top: 1em;
+}
+
 @media only screen and (max-width: $tabletBreakpoint) {
     #grid-row{
         height: 0px;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactRevealText from 'react-reveal-text';
-import { Menu, Link } from 'semantic-ui-react';
-
+import { Menu } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 class NavMenu extends Component {
   constructor( props ) {

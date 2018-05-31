@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Grid, Menu, Item } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import NavMenu from './components/NavMenu.jsx';
 import Home from './components/Home.jsx';
-
+import Rooms from './components/Rooms.jsx';
 
 class App extends Component {
   render() {
@@ -18,6 +18,7 @@ class App extends Component {
             <Grid.Column width={13}>
               <Switch>
                 <Route path="/" exact component={Home} />
+                <Route path="/rooms" exact component={Rooms} />
               </Switch>
             </Grid.Column>
           </Grid.Row>

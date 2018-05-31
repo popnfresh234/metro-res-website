@@ -4,7 +4,7 @@ import { Container, Segment, Image, Header } from 'semantic-ui-react';
 class Home extends Component {
   render() {
     return (
-      <div style={{ paddingTop: '1em' }}>
+      <div className="container-div">
         <Segment raised compact >
           <Image src="src/images/vancouver.jpg" />
         </Segment>
