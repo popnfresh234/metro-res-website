@@ -8,6 +8,7 @@ class Facilities extends Component {
       image: 'halla',
     };
     this.images = ['kitchena', 'livinga', 'kitchenb', 'batha', 'bathb', 'bathc', 'halla', 'kitchene'];
+    this.thumbs = ['thumbkitchena', 'thumblivinga', 'thumbkitchenb', 'thumbbatha', 'thumbbathb', 'thumbbathc', 'thumbhalla', 'thumbkitchene'];
     this.handleImageClick = this.handleImageClick.bind( this );
     this.handleArrowClick = this.handleArrowClick.bind( this );
   }
@@ -23,15 +24,23 @@ class Facilities extends Component {
     let index = 0;
     if ( increase ) {
       index = ( this.images.indexOf( this.state.image ) + 1 ) % this.images.length;
-    } else if ( this.images.indexOf( this.state.image ) - 1 >= 0 ) {
-      index = this.images.indexOf( this.state.image ) - 1;
     } else {
-      index = this.images.length - 1;
+      index = ( ( this.images.indexOf( this.state.image ) - 1 )
+                + this.images.length ) % this.images.length;
     }
     this.setState( { image: this.images[index] } );
   }
 
   render() {
+    const imageArray = this.thumbs.map( ( imagePath, index ) => ( <Image
+      spaced
+      className="room-image"
+      as="a"
+      href=""
+      src={`src/images/facilities/${imagePath}.jpg`}
+      onClick={e => this.handleImageClick( this.images[index], e )}
+      key={imagePath}
+    /> ) );
     return (
       <div className="container-div">
         <Segment compact raised>
@@ -53,15 +62,7 @@ class Facilities extends Component {
           <Grid>
             <Grid.Row>
               <Grid.Column>
-                <Image spaced className="room-image" as="a" href="" src="src/images/facilities/thumbkitchena.jpg" onClick={e => this.handleImageClick( 'kitchena', e )} />
-                <Image spaced className="room-image" as="a" href="" src="src/images/facilities/thumblivinga.jpg" onClick={e => this.handleImageClick( 'livinga', e )} />
-                <Image spaced className="room-image" as="a" href="" src="src/images/facilities/thumbkitchenb.jpg" onClick={e => this.handleImageClick( 'kitchenb', e )} />
-                <Image spaced className="room-image" as="a" href="" src="src/images/facilities/thumbbatha.jpg" onClick={e => this.handleImageClick( 'batha', e )} />
-                <Image spaced className="room-image" as="a" href="" src="src/images/facilities/thumbbathb.jpg" onClick={e => this.handleImageClick( 'bathb', e )} />
-                <Image spaced className="room-image" as="a" href="" src="src/images/facilities/thumbbathc.jpg" onClick={e => this.handleImageClick( 'bathc', e )} />
-                <Image spaced className="room-image" as="a" href="" src="src/images/facilities/thumbhalla.jpg" onClick={e => this.handleImageClick( 'halla', e )} />
-                <Image spaced className="room-image" as="a" href="" src="src/images/facilities/thumbkitchene.jpg" onClick={e => this.handleImageClick( 'kitchene', e )} />
-
+                {imageArray}
               </Grid.Column>
             </Grid.Row>
           </Grid>
@@ -69,11 +70,11 @@ class Facilities extends Component {
         <Segment compact raised>
           <Container text>
             <Header as="h4">
-            Welcome to our shared community; including a bright airy kitchen,
-            washer/dryer, comfortable common room where you can enjoy a new 40 inch
-            LCD TV, cable, and wireless internet. Large outside deck is a fun
-            spot to play ping pong, have picnics, or just read in the sun.
-            The back yard is a large space in which gardeners can grow their favourite plants
+                Welcome to our shared community; including a bright airy kitchen,
+                washer/dryer, comfortable common room where you can enjoy a new 40 inch
+                LCD TV, cable, and wireless internet. Large outside deck is a fun
+                spot to play ping pong, have picnics, or just read in the sun.
+                The back yard is a large space in which gardeners can grow their favourite plants
             </Header>
           </Container>
         </Segment>
