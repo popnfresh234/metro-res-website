@@ -9,7 +9,16 @@ class App extends Component {
     return (
 
       <div className="App">
-        <NavMenu />
+        <Grid stackable>
+          <Grid.Row id="grid-row" >
+            <Grid.Column color="blue" width={3} style={{ paddingRight: '0px' }}>
+              <NavMenu />
+            </Grid.Column>
+            <Grid.Column width={13}>
+              <p> test </p>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       </div>
     );
   }

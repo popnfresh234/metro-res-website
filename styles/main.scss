@@ -1,0 +1,10 @@
+#grid-row{
+    height: 100vh; 
+    padding-bottom: 0px;
+}
+
+@media only screen and (max-width: $tabletBreakpoint) {
+    #grid-row{
+        height: 0px;
+    }
+}

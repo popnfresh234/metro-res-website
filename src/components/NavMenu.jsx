@@ -6,7 +6,16 @@ import { Menu, Link } from 'semantic-ui-react';
 class NavMenu extends Component {
   constructor( props ) {
     super( props );
+    this.state = {
+      activeItem: 'home',
+    };
     this.handleItemClick = this.handleItemClick.bind( this );
+  }
+
+  componentDidMount() {
+    setTimeout( () => {
+      this.setState( { show: true } );
+    }, 700 );
   }
 
   handleItemClick( e, { name } ) {
@@ -15,25 +24,28 @@ class NavMenu extends Component {
     } );
   }
 
+
   render() {
-    const activeItem = this.state;
+    const { activeItem } = this.state;
     const revealStyle = {
-      color: '#0096EE',
+      padding: '1em',
+      color: '#FFFFFF',
       letterSpacing: '4px',
-      fontSize: '38px',
+      fontSize: '14px',
       fontWeight: '300',
-      lineHeight: '43px',
+      lineHeight: '14px',
     };
 
     return (
       <div>
-        <ReactRevealText
-          text="Metro Residences"
-          show={this.state.show}
-          className=""
-          style={revealStyle}
-        />
-        <Menu className="left-menu" vertical inverted color="blue" fixed="left" style={{ width: '250px' }}>
+
+        <Menu size="huge" className="left-menu" fluid vertical inverted color="blue">
+          <ReactRevealText
+            text="Metro Residences"
+            show={this.state.show}
+            className=""
+            style={revealStyle}
+          />
           <Menu.Item as={Link} to="/" name="home" active={activeItem === 'home'} onClick={this.handleItemClick} />
           <Menu.Item as={Link} to="/" name="rooms" active={activeItem === 'rooms'} onClick={this.handleItemClick} />
           <Menu.Item as={Link} to="/" name="facilities" active={activeItem === 'facilities'} onClick={this.handleItemClick} />
