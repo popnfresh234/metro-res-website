@@ -1,20 +1,31 @@
 import React, { Component } from 'react';
-import { Grid } from 'semantic-ui-react';
-import { Route, Switch, Redirect } from 'react-router-dom';
-
+import { Container, Segment, Image, Header } from 'semantic-ui-react';
 
 class Home extends Component {
   render() {
     return (
-      <Grid.Row>
-        <Grid.Column color="red" width={4}>
-          <p> Left </p>
-        </Grid.Column>
+      <div style={{ paddingTop: '1em' }}>
+        <Segment raised compact >
+          <Image src="src/images/vancouver.jpg" />
+        </Segment>
+        <Segment raised compact>
+          <Container textAlign="left">
+            <Header as="h1">
+            Welcome to Metro Residences, located in the heart of beautiful Vancouver.
+            </Header>
 
-        <Grid.Column width={12}>
-          <p> Right </p>
-        </Grid.Column>
-      </Grid.Row>
+            <Header as="h5">
+            Metro Residences offers the opportunity
+            to live in and experience this world class city at an excellent value.
+            </Header>
+            <Header as="h5">
+            Metro Residences can be your safe, secure home away from home, whether
+            working or studying. We provide a peaceful, quiet room of your own to
+            anybody on a budget needing tidy and comfortable surroundings
+            </Header>
+          </Container>
+        </Segment>
+      </div>
     );
   }
 }
