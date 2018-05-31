@@ -20,7 +20,6 @@ class Rooms extends Component {
   }
 
   handleArrowClick( increase ) {
-    console.log( increase );
     let index = 0;
     if ( increase ) {
       index = ( this.rooms.indexOf( this.state.room ) + 1 ) % this.rooms.length;
@@ -38,18 +37,19 @@ class Rooms extends Component {
         <Segment compact raised>
           <Grid stackable verticalAlign="middle" textAlign="center">
             <Grid.Row>
-              <Grid.Column width={1}>
+              <Grid.Column width={2}>
                 <Button circular icon="arrow left" onClick={() => this.handleArrowClick()} />
               </Grid.Column>
-              <Grid.Column width={14}>
+              <Grid.Column width={12}>
                 <Image src={`src/images/rooms/${this.state.room}.jpg`} />
               </Grid.Column>
-              <Grid.Column width={1}>
+              <Grid.Column width={2}>
                 <Button circular icon="arrow right" onClick={() => this.handleArrowClick( 'positive' )} />
               </Grid.Column>
             </Grid.Row>
           </Grid>
         </Segment>
+
         <Segment compact raised>
           <Grid>
             <Grid.Row>

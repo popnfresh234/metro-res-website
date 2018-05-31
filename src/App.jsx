@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import NavMenu from './components/NavMenu.jsx';
 import Home from './components/Home.jsx';
 import Rooms from './components/Rooms.jsx';
+import Facilities from './components/Facilities.jsx';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
               <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/rooms" exact component={Rooms} />
+                <Route path="/facilities" exact component={Facilities} />
               </Switch>
             </Grid.Column>
           </Grid.Row>
