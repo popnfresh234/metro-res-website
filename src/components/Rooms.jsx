@@ -19,6 +19,16 @@ class Rooms extends Component {
           <Image as="a" href="" floated="left" style={imageStyle} src="src/images/rooms/thumbe.jpg" />
           <Image as="a" href="" floated="left" style={{ marginRight: '0px' }} src="src/images/rooms/thumbf.jpg" />
         </Segment>
+        <Segment compact raised>
+          <Container text>
+            <Header as="h4">
+        Metro Residenecs offers a variety of newly renovated,
+        fully furnished rooms including laminate flooring,
+        fridge, desk and task chair, lamp, and storage.
+        All rooms have large, screened windows offering light and fresh air.
+            </Header>
+          </Container>
+        </Segment>
       </div>
     );
   }
