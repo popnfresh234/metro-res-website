@@ -13,6 +13,9 @@ const extractStyles = loaders => ( process.env.NODE_ENV === 'production'
   : ['style-loader'].concat( loaders ) );
 
 module.exports = {
+  node: {
+    fs: 'empty',
+  },
   devtool: 'source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',

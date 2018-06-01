@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import NavMenu from './components/NavMenu.jsx';
 import Home from './components/Home.jsx';
 import PicturePage from './components/PicturePage.jsx';
+import Location from './components/Location.jsx';
 import Utils from './components/Utils';
 
 
@@ -49,6 +50,7 @@ class App extends Component {
 
                     /> )}
                 />
+                <Route path="/location" exact component={Location} />
               </Switch>
             </Grid.Column>
           </Grid.Row>
