@@ -5,10 +5,10 @@ class Facilities extends Component {
   constructor( props ) {
     super( props );
     this.state = {
-      image: 'halla',
+      image: this.props.images[0],
+      images: this.props.images,
+      thumbs: this.props.thumbs,
     };
-    this.images = ['kitchena', 'livinga', 'kitchenb', 'batha', 'bathb', 'bathc', 'halla', 'kitchene'];
-    this.thumbs = ['thumbkitchena', 'thumblivinga', 'thumbkitchenb', 'thumbbatha', 'thumbbathb', 'thumbbathc', 'thumbhalla', 'thumbkitchene'];
     this.handleImageClick = this.handleImageClick.bind( this );
     this.handleArrowClick = this.handleArrowClick.bind( this );
   }
@@ -23,22 +23,22 @@ class Facilities extends Component {
   handleArrowClick( increase ) {
     let index = 0;
     if ( increase ) {
-      index = ( this.images.indexOf( this.state.image ) + 1 ) % this.images.length;
+      index = ( this.state.images.indexOf( this.state.image ) + 1 ) % this.state.images.length;
     } else {
-      index = ( ( this.images.indexOf( this.state.image ) - 1 )
-                + this.images.length ) % this.images.length;
+      index = ( ( this.state.images.indexOf( this.state.image ) - 1 )
+                + this.state.images.length ) % this.state.images.length;
     }
-    this.setState( { image: this.images[index] } );
+    this.setState( { image: this.state.images[index] } );
   }
 
   render() {
-    const imageArray = this.thumbs.map( ( imagePath, index ) => ( <Image
+    const imageArray = this.state.thumbs.map( ( imagePath, index ) => ( <Image
       spaced
-      className="room-image"
+      className="grid-image"
       as="a"
       href=""
-      src={`src/images/facilities/${imagePath}.jpg`}
-      onClick={e => this.handleImageClick( this.images[index], e )}
+      src={`src/images/${this.props.rootPath}/${imagePath}.jpg`}
+      onClick={e => this.handleImageClick( this.state.images[index], e )}
       key={imagePath}
     /> ) );
     return (
@@ -50,7 +50,7 @@ class Facilities extends Component {
                 <Button circular icon="arrow left" onClick={() => this.handleArrowClick()} />
               </Grid.Column>
               <Grid.Column width={12}>
-                <Image src={`src/images/facilities/${this.state.image}.jpg`} />
+                <Image src={`src/images/${this.props.rootPath}/${this.state.image}.jpg`} />
               </Grid.Column>
               <Grid.Column width={2}>
                 <Button circular icon="arrow right" onClick={() => this.handleArrowClick( 'positive' )} />

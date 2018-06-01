@@ -4,10 +4,13 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import NavMenu from './components/NavMenu.jsx';
 import Home from './components/Home.jsx';
 import Rooms from './components/Rooms.jsx';
-import Facilities from './components/Facilities.jsx';
+import PicturePage from './components/PicturePage.jsx';
+import Utils from './components/Utils';
+
 
 class App extends Component {
   render() {
+    console.log( Utils.FACILITY_THUMBS );
     return (
 
       <div className="App">
@@ -19,8 +22,32 @@ class App extends Component {
             <Grid.Column width={13}>
               <Switch>
                 <Route path="/" exact component={Home} />
-                <Route path="/rooms" exact component={Rooms} />
-                <Route path="/facilities" exact component={Facilities} />
+                <Route
+                  path="/rooms"
+                  key="rooms"
+                  exact
+                  render={props =>
+                    ( <PicturePage
+                      {...props}
+                      rootPath="rooms"
+                      images={Utils.ROOM_IMAGES}
+                      thumbs={Utils.ROOM_THUMBS}
+
+                    /> )}
+                />
+                <Route
+                  path="/facilities"
+                  key="facilities"
+                  exact
+                  render={props =>
+                    ( <PicturePage
+                      {...props}
+                      rootPath="facilities"
+                      images={Utils.FACILITY_IMAGES}
+                      thumbs={Utils.FACILITY_THUMBS}
+
+                    /> )}
+                />
               </Switch>
             </Grid.Column>
           </Grid.Row>
