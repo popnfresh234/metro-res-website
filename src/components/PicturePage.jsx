@@ -67,17 +67,15 @@ class Facilities extends Component {
             </Grid.Row>
           </Grid>
         </Segment>
+        { this.props.caption &&
         <Segment compact raised>
           <Container text>
             <Header as="h4">
-                Welcome to our shared community; including a bright airy kitchen,
-                washer/dryer, comfortable common room where you can enjoy a new 40 inch
-                LCD TV, cable, and wireless internet. Large outside deck is a fun
-                spot to play ping pong, have picnics, or just read in the sun.
-                The back yard is a large space in which gardeners can grow their favourite plants
+              {this.props.caption}
             </Header>
           </Container>
         </Segment>
+        }
       </div>
     );
   }

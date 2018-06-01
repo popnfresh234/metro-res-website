@@ -3,7 +3,6 @@ import { Grid } from 'semantic-ui-react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import NavMenu from './components/NavMenu.jsx';
 import Home from './components/Home.jsx';
-import Rooms from './components/Rooms.jsx';
 import PicturePage from './components/PicturePage.jsx';
 import Utils from './components/Utils';
 
@@ -30,6 +29,7 @@ class App extends Component {
                     ( <PicturePage
                       {...props}
                       rootPath="rooms"
+                      caption={Utils.ROOM_CAPTION}
                       images={Utils.ROOM_IMAGES}
                       thumbs={Utils.ROOM_THUMBS}
 
@@ -43,6 +43,7 @@ class App extends Component {
                     ( <PicturePage
                       {...props}
                       rootPath="facilities"
+                      caption={Utils.FACILITY_CAPTION}
                       images={Utils.FACILITY_IMAGES}
                       thumbs={Utils.FACILITY_THUMBS}
 
