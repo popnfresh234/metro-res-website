@@ -5,6 +5,7 @@ import NavMenu from './components/NavMenu.jsx';
 import Home from './components/Home.jsx';
 import PicturePage from './components/PicturePage.jsx';
 import Location from './components/Location.jsx';
+import Contact from './components/Contact.jsx';
 import Utils from './components/Utils';
 
 
@@ -64,6 +65,7 @@ class App extends Component {
 
                     /> )}
                 />
+                <Route path="/contact" exact component={Contact} />
               </Switch>
             </Grid.Column>
           </Grid.Row>
