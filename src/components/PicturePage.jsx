@@ -44,6 +44,7 @@ class Facilities extends Component {
     return (
 
       <div className="container-div" >
+
         <Card fluid style={{ maxWidth: '700px' }}>
           <Segment compact raised>
             <Grid stackable verticalAlign="middle" textAlign="center">
@@ -60,6 +61,7 @@ class Facilities extends Component {
               </Grid.Row>
             </Grid>
           </Segment>
+
           <Card.Content>
             <Grid>
               <Grid.Row>
@@ -71,12 +73,14 @@ class Facilities extends Component {
           </Card.Content>
           <Card.Content>
             { this.props.caption &&
-              <Container fluid text>
+
+              <Container text>
                 <Header as="h4">
                   {this.props.caption}
                 </Header>
               </Container>
-            }
+
+        }
           </Card.Content>
           <Card.Content extra>
             <a>
@@ -85,6 +89,7 @@ class Facilities extends Component {
             </a>
           </Card.Content>
         </Card>
+
       </div>
     );
   }
