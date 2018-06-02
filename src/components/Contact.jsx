@@ -15,7 +15,7 @@ class Contact extends Component {
                 Metro Residences
             </Card.Header>
             <Card.Meta>
-                Rooms are available from 500-600 per month
+                Rooms are available from 600-700 per month
             </Card.Meta>
             <br />
             <Card.Description>
@@ -40,12 +40,6 @@ class Contact extends Component {
               </Header>
               <a href="mailto:booking@metro-res.com">booking@metro-res.com</a>
             </Card.Description>
-          </Card.Content>
-          <Card.Content extra>
-            <a>
-              <Icon name="user" />
-                  22 Friends
-            </a>
           </Card.Content>
         </Card>
 
