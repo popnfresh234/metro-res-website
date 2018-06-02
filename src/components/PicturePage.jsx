@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Segment, Image, Header, Grid, Button } from 'semantic-ui-react';
+import { Container, Card, Segment, Image, Header, Grid, Button } from 'semantic-ui-react';
 
 class Facilities extends Component {
   constructor( props ) {
@@ -42,40 +42,49 @@ class Facilities extends Component {
       key={imagePath}
     /> ) );
     return (
-      <div className="container-div">
-        <Segment compact raised>
-          <Grid stackable verticalAlign="middle" textAlign="center">
-            <Grid.Row>
-              <Grid.Column width={2}>
-                <Button circular icon="arrow left" onClick={() => this.handleArrowClick()} />
-              </Grid.Column>
-              <Grid.Column width={12}>
-                <Image src={`src/images/${this.props.rootPath}/${this.state.image}.jpg`} />
-              </Grid.Column>
-              <Grid.Column width={2}>
-                <Button circular icon="arrow right" onClick={() => this.handleArrowClick( 'positive' )} />
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Segment>
-        <Segment compact raised>
-          <Grid>
-            <Grid.Row>
-              <Grid.Column>
-                {imageArray}
-              </Grid.Column>
-            </Grid.Row>
-          </Grid>
-        </Segment>
-        { this.props.caption &&
-        <Segment compact raised>
-          <Container text>
-            <Header as="h4">
-              {this.props.caption}
-            </Header>
-          </Container>
-        </Segment>
-        }
+
+      <div className="container-div" >
+        <Card fluid style={{ maxWidth: '700px' }}>
+          <Segment compact raised>
+            <Grid stackable verticalAlign="middle" textAlign="center">
+              <Grid.Row>
+                <Grid.Column width={2}>
+                  <Button circular icon="arrow left" onClick={() => this.handleArrowClick()} />
+                </Grid.Column>
+                <Grid.Column width={12}>
+                  <Image src={`src/images/${this.props.rootPath}/${this.state.image}.jpg`} />
+                </Grid.Column>
+                <Grid.Column width={2}>
+                  <Button circular icon="arrow right" onClick={() => this.handleArrowClick( 'positive' )} />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Segment>
+          <Card.Content>
+            <Grid>
+              <Grid.Row>
+                <Grid.Column>
+                  {imageArray}
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+          </Card.Content>
+          <Card.Content>
+            { this.props.caption &&
+              <Container fluid text>
+                <Header as="h4">
+                  {this.props.caption}
+                </Header>
+              </Container>
+            }
+          </Card.Content>
+          <Card.Content extra>
+            <a>
+              <i className="far fa-envelope" />
+              <a href="mailto:booking@metro-res.com">  booking@metro-res.com</a>
+            </a>
+          </Card.Content>
+        </Card>
       </div>
     );
   }
