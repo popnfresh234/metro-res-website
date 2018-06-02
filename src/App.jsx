@@ -51,6 +51,19 @@ class App extends Component {
                     /> )}
                 />
                 <Route path="/location" exact component={Location} />
+                <Route
+                  path="/gallery"
+                  key="gallery"
+                  exact
+                  render={props =>
+                    ( <PicturePage
+                      {...props}
+                      rootPath="gallery"
+                      images={Utils.GALLERY_IMAGES}
+                      thumbs={Utils.GALLERY_THUMBS}
+
+                    /> )}
+                />
               </Switch>
             </Grid.Column>
           </Grid.Row>
