@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import ReactRevealText from 'react-reveal-text';
 import { Menu } from 'semantic-ui-react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class NavMenu extends Component {
   constructor( props ) {
     super( props );
     this.state = {
-      activeItem: 'home',
+      show: false,
     };
-    this.handleItemClick = this.handleItemClick.bind( this );
   }
 
   componentDidMount() {
@@ -18,15 +17,8 @@ class NavMenu extends Component {
     }, 700 );
   }
 
-  handleItemClick( e, { name } ) {
-    this.setState( {
-      activeItem: name,
-    } );
-  }
-
 
   render() {
-    const { activeItem } = this.state;
     const revealStyle = {
       padding: '1em',
       color: '#FFFFFF',
@@ -46,12 +38,12 @@ class NavMenu extends Component {
             className=""
             style={revealStyle}
           />
-          <Menu.Item as={Link} to="/" name="home" active={activeItem === 'home'} onClick={this.handleItemClick} />
-          <Menu.Item as={Link} to="/rooms" name="rooms" active={activeItem === 'rooms'} onClick={this.handleItemClick} />
-          <Menu.Item as={Link} to="/facilities" name="facilities" active={activeItem === 'facilities'} onClick={this.handleItemClick} />
-          <Menu.Item as={Link} to="/location" name="location" active={activeItem === 'location'} onClick={this.handleItemClick} />
-          <Menu.Item as={Link} to="/gallery" name="gallery" active={activeItem === 'gallery'} onClick={this.handleItemClick} />
-          <Menu.Item as={Link} to="/contact" name="contact" active={activeItem === 'contact'} onClick={this.handleItemClick} />
+          <Menu.Item as={NavLink} exact to="/" name="home" onClick={this.handleItemClick} />
+          <Menu.Item as={NavLink} to="/rooms" name="rooms" onClick={this.handleItemClick} />
+          <Menu.Item as={NavLink} to="/facilities" name="facilities" onClick={this.handleItemClick} />
+          <Menu.Item as={NavLink} to="/location" name="location" onClick={this.handleItemClick} />
+          <Menu.Item as={NavLink} to="/gallery" name="gallery" onClick={this.handleItemClick} />
+          <Menu.Item as={NavLink} to="/contact" name="contact" onClick={this.handleItemClick} />
         </Menu>
       </div>
     );
