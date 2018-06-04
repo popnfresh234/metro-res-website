@@ -3,6 +3,7 @@ const webpack = require( 'webpack' );
 const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
+const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
 
 const DIST = path.resolve( __dirname, './dist' );
 
@@ -81,5 +82,9 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html',
     } ),
+    // Copy assets folder to dist
+    new CopyWebpackPlugin( [
+      { from: './assets', to: './assets' },
+    ] ),
   ],
 };
