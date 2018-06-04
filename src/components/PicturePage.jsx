@@ -37,7 +37,7 @@ class Facilities extends Component {
       className="grid-image"
       as="a"
       href=""
-      src={`src/images/${this.props.rootPath}/${imagePath}.jpg`}
+      src={`assets/images/${this.props.rootPath}/${imagePath}.jpg`}
       onClick={e => this.handleImageClick( this.state.images[index], e )}
       key={imagePath}
     /> ) );
@@ -53,7 +53,7 @@ class Facilities extends Component {
                   <Button circular icon="arrow left" onClick={() => this.handleArrowClick()} />
                 </Grid.Column>
                 <Grid.Column width={12}>
-                  <Image src={`src/images/${this.props.rootPath}/${this.state.image}.jpg`} />
+                  <Image src={`assets/images/${this.props.rootPath}/${this.state.image}.jpg`} />
                 </Grid.Column>
                 <Grid.Column width={2}>
                   <Button circular icon="arrow right" onClick={() => this.handleArrowClick( 'positive' )} />

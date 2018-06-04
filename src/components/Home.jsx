@@ -8,7 +8,7 @@ class Home extends Component {
 
         <Card fluid style={{ maxWidth: '700px' }}>
           <Segment compact raised>
-            <Image src="src/images/vancouver.jpg" />
+            <Image src="assets/images/vancouver.jpg" />
           </Segment>
           <Card.Content>
             <Card.Header>

@@ -8,7 +8,7 @@ class Contact extends Component {
 
         <Card fluid style={{ maxWidth: '700px' }}>
           <Segment compact raised>
-            <Image src="/src/images/gallery/gallerya.jpg" />
+            <Image src="/assets/images/gallery/gallerya.jpg" />
           </Segment>
           <Card.Content>
             <Card.Header>
