@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' );
+const BundleAnalyzerPlugin = require( 'webpack-bundle-analyzer' ).BundleAnalyzerPlugin;
 
 const DIST = path.resolve( __dirname, './dist' );
 
@@ -86,5 +87,6 @@ module.exports = {
     new CopyWebpackPlugin( [
       { from: './assets', to: './assets' },
     ] ),
+    new BundleAnalyzerPlugin(),
   ],
 };

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple and lightweight Boilerplate for ReactJS projects",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack -p",
     "lint": "eslint --ext .jsx,.js src --fix",
     "start": "node server.js"
   },
@@ -51,25 +51,20 @@
     "less": "^2.7.3",
     "less-loader": "^4.1.0",
     "node-sass": "4.5.0",
-    "rimraf": "^2.6.2",
     "sass-loader": "6.0.0",
     "semantic-ui-less": "2.2.14",
-    "sockjs-client": "^1.1.2",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
     "webpack": "^3.11.0",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-dev-server": "^2.11.2"
   },
   "dependencies": {
     "react": "15.4.2",
-    "react-chartjs-2": "^2.7.2",
-    "react-datepicker": "^1.4.1",
     "react-dom": "15.4.2",
     "react-reveal-text": "^0.1.1",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "^1.1.4",
-    "semantic-ui-react": "^0.79.1",
-    "serve": "^6.5.6"
+    "semantic-ui-react": "^0.79.1"
   },
   "bugs": {
     "url": "https://github.com/popnfresh234/chatty/issues"
