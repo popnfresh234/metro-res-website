@@ -2,6 +2,7 @@ const path = require( 'path' );
 const webpack = require( 'webpack' );
 const CleanWebpackPlugin = require( 'clean-webpack-plugin' );
 const ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const HtmlWebpackPlugin = require( 'html-webpack-plugin' );
 
 const DIST = path.resolve( __dirname, './dist' );
 
@@ -74,6 +75,11 @@ module.exports = {
     // Extract text from a bundle, or bundles, into a separate file.
     new ExtractTextPlugin( {
       filename: '[name].[contenthash].css',
+    } ),
+    // Create copy of index.html
+    new HtmlWebpackPlugin( {
+      filename: 'index.html',
+      template: 'index.html',
     } ),
   ],
 };

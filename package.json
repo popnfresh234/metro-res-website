@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple and lightweight Boilerplate for ReactJS projects",
   "scripts": {
-    "build": "webpack && rsync -auv dist/ ./export/build",
+    "build": "webpack",
     "lint": "eslint --ext .jsx,.js src --fix",
     "start": "node server.js"
   },
