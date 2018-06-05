@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid } from 'semantic-ui-react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import NavMenu from './components/NavMenu.jsx';
 import Home from './components/Home.jsx';
 import PicturePage from './components/PicturePage.jsx';

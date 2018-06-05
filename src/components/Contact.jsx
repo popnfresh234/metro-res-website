@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, Image, Icon, Header, Divider, Segment } from 'semantic-ui-react';
+import { Card, Image, Header, Segment } from 'semantic-ui-react';
 
 class Contact extends Component {
   render() {

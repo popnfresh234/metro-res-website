@@ -1,3 +1,15 @@
 {
-  "presets": ["es2015", "stage-0", "react"]
+  "presets": ["es2015", "stage-0", "react"],
+  "plugins": [
+    "transform-react-jsx",
+    [
+      "lodash",
+      {
+        "id": [
+          "lodash",
+          "semantic-ui-react"
+        ]
+      }
+    ]
+  ]
 }

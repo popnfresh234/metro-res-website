@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import { Card, Segment, Header } from 'semantic-ui-react';
 
 class Location extends Component {

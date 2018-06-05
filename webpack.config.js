@@ -27,7 +27,7 @@ module.exports = {
   output: {
     path: DIST,
     filename: 'bundle.js',
-    publicPath: '/build/',
+    publicPath: '/',
   },
   resolve: {
     alias: {

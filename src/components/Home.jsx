@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Card, Segment, Image, Header, Icon } from 'semantic-ui-react';
+import { Card, Segment, Image, Header } from 'semantic-ui-react';
 
 class Home extends Component {
   render() {

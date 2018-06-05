@@ -1,8 +1,7 @@
-import 'semantic-ui-less/semantic.less';
 import React from 'react';
-
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import '../semantic-theme/semantic.less';
 import App from './App.jsx';
 
 require( '../styles/application.scss' );
