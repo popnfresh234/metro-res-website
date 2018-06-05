@@ -86,7 +86,8 @@ module.exports = {
     // Copy assets folder to dist
     new CopyWebpackPlugin( [
       { from: './assets', to: './assets' },
+      { from: '.htaccess' },
     ] ),
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
 };
