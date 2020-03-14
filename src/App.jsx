@@ -11,7 +11,6 @@ import Utils from './components/Utils';
 
 class App extends Component {
   render() {
-    console.log( Utils.FACILITY_THUMBS );
     return (
       <div className="App">
         <Grid stackable>
