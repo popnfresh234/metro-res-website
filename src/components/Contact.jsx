@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Card, Image, Header, Segment } from 'semantic-ui-react';
-import { PayPalButton } from 'react-paypal-button-v2';
 
 class Contact extends Component {
   render() {
