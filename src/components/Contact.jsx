@@ -15,7 +15,7 @@ class Contact extends Component {
                 Metro Residences
             </Card.Header>
             <Card.Meta>
-                Rooms are available from 600-700 per month
+                Rooms are available from $700.00 per month
             </Card.Meta>
             <br />
             <Card.Description>
@@ -44,30 +44,45 @@ class Contact extends Component {
             {/* PayPal Button for Paying Rent/Deposit */}
             <Card.Description>
               <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <input type="hidden" name="cmd" value="_s-xclick" />
-                <input type="hidden" name="hosted_button_id" value="2SBDLZRVNXP98" />
+                <input type="hidden" name="cmd" value="_xclick" />
+                <input type="hidden" name="business" value="moonglow80@hotmail.com" />
+                <input type="hidden" name="lc" value="CA" />
+                <input type="hidden" name="item_name" value="Pay Rent" />
+                <input type="hidden" name="button_subtype" value="services" />
+                <input type="hidden" name="no_note" value="0" />
+                <input type="hidden" name="currency_code" value="CAD" />
+                <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest" />
                 <table>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <input type="hidden" name="on0" value="price options" />
-                        <Header>Pay Online!</Header>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <select name="os0">
-                          <option value="Option 600.00">$600.00 </option>
-                          <option value="Option 500.00">$500.00 </option>
-                          <option value="Option $200.00 deposit">$200.00 deposit </option>
-                        </select>
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tr>
+                    <td>
+                      <input type="hidden" name="on0" value="Rent" />Rent
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <select name="os0">
+                        <option value="Rent 1">Rent 1 $700.00 CAD</option>
+                        <option value="Rent 2">Rent 2 $600.00 CAD</option>
+                        <option value="Rent 3">Rent 3 $500.00 CAD</option>
+                        <option value="Deposit">Deposit $350.00 CAD</option>
+                      </select>
+                    </td>
+                  </tr>
                 </table>
-                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" name="submit" alt="PayPal - The safer, easier way to pay online!" />
-                <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+                <input type="hidden" name="option_select0" value="Rent 1" />
+                <input type="hidden" name="option_amount0" value="700.00" />
+                <input type="hidden" name="option_select1" value="Rent 2" />
+                <input type="hidden" name="option_amount1" value="600.00" />
+                <input type="hidden" name="option_select2" value="Rent 3" />
+                <input type="hidden" name="option_amount2" value="500.00" />
+                <input type="hidden" name="option_select3" value="Deposit" />
+                <input type="hidden" name="option_amount3" value="350.00" />
+                <input type="hidden" name="option_index" value="0" />
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" />
+                <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" />
               </form>
+
+
             </Card.Description>
 
           </Card.Content>
