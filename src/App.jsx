@@ -30,6 +30,7 @@ class App extends Component {
                       {...props}
                       rootPath="rooms"
                       caption={Utils.ROOM_CAPTION}
+                      details={Utils.ROOM_DETAILS}
                       images={Utils.ROOM_IMAGES}
                       thumbs={Utils.ROOM_THUMBS}
 

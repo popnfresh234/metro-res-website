@@ -73,14 +73,20 @@ class Facilities extends Component {
           </Card.Content>
           <Card.Content>
             { this.props.caption &&
-
               <Container text>
                 <Header as="h4">
                   {this.props.caption}
                 </Header>
               </Container>
-
-        }
+            }
+            <br />
+            { this.props.details &&
+              <Container text>
+                <Header as="h5">
+                  {this.props.details}
+                </Header>
+              </Container>
+            }
           </Card.Content>
           <Card.Content extra>
             <a>
